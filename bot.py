@@ -49,7 +49,7 @@ def get_keyboard(user_id, is_admin=False):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global liste_ouverte, Presentes
-    Presentes.clear()
+    presentes.clear()
     liste_ouverte = True
     if "admin_id" not in context.bot_data:
         context.bot_data["admin_id"] = update.effective_user.id
